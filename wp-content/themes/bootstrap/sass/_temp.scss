@@ -1,26 +1,171 @@
-.hero-image {
-	height: 240px;
+/* Removing the default styles and making it FLEX */
+.pp-section.pp-table {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-form {
-	margin: 20px 0 40px 0;
+.pp-tableCell {
+    display: block;
+    vertical-align: unset;
+    width: unset;
+    height: unset !important;
+    margin: 0 60px;
 }
 
 img {
 	max-width: 100%;
 }
 
-h2 > span {
-	color: $brand-primary;
+h1 {
+	color: white;
+	font-weight: 600;
+	font-size: 65px;
+	text-shadow: 2px 2px 0px black;
+	text-transform: uppercase;
+	font-family: 'Impact';
+	letter-spacing: 2px;
 }
 
-.padding {
-	padding: 40px 0;
+h3 {
+	color: #b15252;
+	font-weight: 500;
+	font-size: 53px;
+	text-shadow: 2px 2px 0px black;
+	text-transform: uppercase;
+	font-family: 'Impact';
+	letter-spacing: 1px;
+	margin-bottom: 5%;
+}
+
+.action-button {
+	color: white;
+	background-color: transparent;
+	border-color: #ccc;
+	text-shadow: 1px 1px #333;
+	font-size: 21px;
+	border: 2px solid #fff;
+	border-radius: 0;
+	&:hover {
+		text-shadow: none;
+		border: 2px solid #000;
+		background: #000;
+		color: white;
+
+	}
+}
+
+#about h1 {
+	color: black;
+	text-shadow: unset;
+}
+
+.flex {
+	display: flex;
+    display: -webkit-flex;
 }
 
 
-/* footer */
+.hr-small {
+	display: block;
+    width: 15%;
+    margin: 15px auto;
+    height: 1px;
+    background-color: rgba(0, 0, 0, .2);
+}
 
-footer img {
-	width: 180px;
+
+
+
+
+
+#infoMenu{
+	position: fixed;
+	z-index: 222;
+	color: white;
+
+}
+
+
+#about {
+	.flex {
+		justify-content: space-between;
+
+	}
+	.flex-box {
+		flex-basis: 20%;
+		position: relative;
+		background: black; 
+		transition: opacity 1s ease;
+		.title{
+			bottom: 3px;
+			color: white;
+			font-size: 18px;
+			text-shadow: 1px 1px black;
+			left: 3px;
+			position: absolute;
+			p{
+				opacity: 0;
+				font-size: 0;
+				padding:0;
+				margin: 0;
+				transition: opacity 1s ease;
+				transition: font-size 1s ease;
+			}
+		}
+		&:hover{
+			opacity: .8; 
+		}
+		&:hover p{
+			opacity: 1 !important;
+			font-size: 14px !important;
+		}
+	}
+}
+
+
+#service {
+	h2{
+		opacity: 0;
+		font-size: 0;
+		padding: 0;
+		margin: 0;
+		transition: opacity 1s ease;
+		transition: font-size .8s ease;
+
+	}
+	.fa {
+		font-size: 50px;
+		transition: font-size 1s ease;
+	}
+	.services {
+		background: #fffc;
+		flex-basis: 20%;
+		padding: 20px;
+		margin: 1px 1px;
+		transition: background 1s ease;
+		&:hover {
+			background: #fff;
+		}
+		&:hover  #service h2{
+			opacity: 1;
+		}
+
+
+	}
+	.flex {
+		justify-content: center;
+
+	}
+
+}
+
+.services:hover  h2 {
+	opacity: 1 !important;
+	font-size: 26px !important;
+}
+
+.services:hover  .fa {
+	font-size: 10px !important;
 }

@@ -1,156 +1,326 @@
-<?php get_header(); ?>
+<?php get_header() ?>
 
-<?php get_template_part( 'includes/home', 'slider' ); ?>
-
-
-<div class="container text-center padding">
-
-  <h2>Welcome to <span>my website</span></h2>
-  <p class="lead">Here at Nelson Bays Property Management, your investment is treated like it’s our own. Taking charge of full property management services to investors and property owners, partnership is guaranteed, maximising the return on investment through efficient performance. With combined extensive knowledge on local markets and customized marketing strategies, values are maximized and risks are minimised, thus promoting long-term sustainable tenancy</p>
+<div id="pagepiling">
 
 
-</div><!-- Container-fluid end -->
+<!-- url('https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c22a26bf6d3281049e05ed_Testimonial-17.jpg')
+url('https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229b7e968bff576bc45cc_Testimonial-16.jpg')
+url('https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229a0c00b1a86047694f3_Testimonial-5.jpg')
+url('https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229f8e968bff576bc45f8_Testimonial-13.jpg') -->
 
-<div class="container padding">
+  <section data-anchor="home" class="section text-center" style="background: url(<?php echo get_template_directory_uri(); ?>/images/background/photo1-min.jpg);">
 
-  <div class="flex">
+  	<h1>Welcome</h1>
 
-    <div class="feature-box">
-      <img src="<?php echo get_template_directory_uri() ?>/images/tiles/coffee-cup-mug-cafe.jpg" alt="">
-      <h2>header</h2>
-      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-    </div>
+  	<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h3>
 
-    <div class="feature-box">
-      <img src="<?php echo get_template_directory_uri() ?>/images/tiles/coffee-cup-mug-cafe.jpg" alt="">
-      <h2>header</h2>
-      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-    </div>
+  	<a href="#" class="btn action-button">Main Call to action</a>
 
-    <div class="feature-box">
-      <img src="<?php echo get_template_directory_uri() ?>/images/tiles/coffee-cup-mug-cafe.jpg" alt="">
-      <h2>header</h2>
-      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-    </div>
-
-  </div>
-  
-</div>
-
-
-<?php $loop = new WP_Query( array( 'post_type' => 'staff', 'posts_per_page' => 10, 'order' => 'ASC' ) ); ?>
-  
-
-<?php $i = 0; if ($loop->have_posts()) : ?>
-
-<div class="container text-center">
-  
-  <h2>Meet the <span>Team</span></h2>
-  
-  <div class="row">
-
-    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-        <div class="col-lg-3">
-        <img class="rounded-circle" src="<?php the_post_thumbnail_url(); ?>" alt="Generic placeholder image" width="140" height="140">
-        <p><b><?php the_title( ); ?></b></p>
-        <p><?php the_content( ); ?></p>
-
-      </div><!-- /.col-lg-4 -->
-
-    <?php $i++; endwhile; ?>
-   
-  </div>
-
-</div>
-
-<?php endif ?>
-
-<div class="container-fluid container-map">
-
-<div id="map"></div>
-
-  <h2>Get in <span>touch</span></h2>
-  
-  <div class="contact-wrap">
-   
-      <div>
-  
-        <form>
-          <div class="form-group">
-            <label for="form_name">Name</label>
-            <input type="text" class="form-control" id="form_name" name="form_name" placeholder="Enter your full name">
-          </div>
-  
-          <div class="form-group">
-            <label for="form_email">Email address</label>
-            <input type="email" class="form-control" id="form_email" name="form_email" placeholder="Provide your email address">
-          </div>
-  
-          <div class="form-group">
-            <label for="form_phone">Phone</label>
-            <input type="text" class="form-control" id="form_phone" name="form_phone" placeholder="Enter a contact phone number">
-          </div>
-  
-          <div class="form-group form-message">
-            <label for="form_message">Message</label>
-            <textarea name="form_message" id="form_message" class="form-control" cols="30" rows="10" placeholder="What do you want?"></textarea>
-          </div>
-          
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-
-      </div>
-    
-  </div>
-  
-
-
-</div><!-- Container-fluid end -->
-
-<?php $loop = new WP_Query( array( 'post_type' => 'testimonials', 'posts_per_page' => 10, 'order' => 'ASC' ) ); ?>
-
-<?php $i = 0; if ($loop->have_posts()) : ?>
-
-<div class="container-fluid" style="background: #eee;">
-
-  <div class="container padding">
-
-    <h2 class="text-center">What our clients are <span>saying</span></h2>
-    
-    
-
-    <!-- Carousel
-  ================================================== -->
-  <section class="myCarousel-slider">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-      <div class="carousel-inner" role="listbox">
-
-      
-      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-      <?php if ($i == 0): ?>
-        <div class="item active">
-      <?php else: ?>
-        <div class="item">
-      <?php endif; ?>
-          <blockquote class="blockquote">
-        <p class="mb-0"><i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i><?php the_content(); ?></p>
-        <p class="pull-right"><small><?php the_title() ?></small></p>
-      </blockquote>
-        </div> <!-- item -->
-
-      <?php $i++; endwhile; ?>
-      </div> <!-- carousel-inner -->
-    </div><!-- /.carousel -->
   </section>
 
-  </div>
-
- <?php endif ?> 
 
 
-</div><!-- Container-fluid end -->
+  <section data-anchor="about" id="about" class="section" style="background: white;">
 
-<?php get_footer(); ?>
+  	<h1 class="text-center">About us</h1>
+
+  	<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus beatae sequi perspiciatis est repellat molestiae nulla rerum voluptate nobis provident, eum veniam ipsa alias doloremque blanditiis. Eveniet id quas numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ex harum est facilis, quos, nisi quasi molestiae eum a atque exercitationem iusto? Natus architecto, amet, sapiente tenetur quia repudiandae inventore!</p>
+
+  	<div class="flex">
+
+  		<div class="flex-box">
+  			<img src="https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229f8e968bff576bc45f8_Testimonial-13.jpg" alt="">
+  			<div class="title">
+  				<header >Name</header>
+  				<span>Job span</span>
+  			</div>
+
+  		</div>
+
+  		<div class="flex-box">
+  			<img src="https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229b7e968bff576bc45cc_Testimonial-16.jpg" alt="">
+  			<div class="title">
+  				<header >Name</header>
+  				<span>Jpb span</span>
+  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, a velit non! Sequi omnis aut a sint, voluptas fugiat provident pariatur quo velit molestiae vero voluptates atque nemo maxime nesciunt.</p>
+  			</div>
+  			
+  		</div>
+
+  		<div class="flex-box">
+
+  			<img src="https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c22a26bf6d3281049e05ed_Testimonial-17.jpg" alt="">
+  			<div class="title">
+  				<header>Name</header>
+  				<span>Jpb span</span>
+  			</div>
+  			
+  		</div>
+
+  		<div class="flex-box">
+
+  			<img src="https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229a0c00b1a86047694f3_Testimonial-5.jpg" alt="">
+  			<div class="title">
+  				<header>Name</header>
+  				<span>Jpb span</span>
+  			</div>
+  			
+  		</div>
+
+  	</div>
+
+
+
+  </section>
+
+
+
+
+  <section data-anchor="service" id="service" class="section" style="background: url(<?php echo get_template_directory_uri(); ?>/images/background/photo3-min.jpg);">
+
+  		<h1 class="text-center">Our Services</h1>
+
+		<div class="flex">
+
+	  		<div class="services text-center">
+
+				<i class="fa fa-wordpress" aria-hidden="true"></i>
+
+			  	<h2>CMS</h2>
+
+			  	<div class="hr-small"></div>
+
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem</p>
+
+	  		</div>
+
+	  		<div class="services text-center">
+
+				<i class="fa fa-google" aria-hidden="true"></i>
+
+			  	<h2>Google</h2>
+
+			  	<div class="hr-small"></div>
+
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem</p>
+
+	  		</div>
+
+	  		<div class="services text-center">
+
+				<i class="fa fa-github" aria-hidden="true"></i>
+
+			  	<h2>Github</h2>
+
+			  	<div class="hr-small"></div>
+
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem</p>
+
+	  		</div>
+
+	  		<div class="services text-center">
+
+				<i class="fa fa-font-awesome" aria-hidden="true"></i>
+
+			  	<h2>font awesome</h2>
+
+			  	<div class="hr-small"></div>
+
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem</p>
+
+	  		</div>
+
+	  		
+	  	</div>
+
+	  	<div class="flex">
+
+	  		<div class="services text-center">
+
+				<i class="fa fa-html5" aria-hidden="true"></i>
+
+			  	<h2>html5</h2>
+
+			  	<div class="hr-small"></div>
+
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem</p>
+
+	  		</div>
+
+	  		<div class="services text-center">
+
+				<i class="fa fa-google" aria-hidden="true"></i>
+
+			  	<h2>Google</h2>
+
+			  	<div class="hr-small"></div>
+
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem</p>
+
+	  		</div>
+
+	  		<div class="services text-center">
+
+				<i class="fa fa-codepen" aria-hidden="true"></i>
+
+			  	<h2>codepen</h2>
+
+			  	<div class="hr-small"></div>
+
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem</p>
+
+	  		</div>
+
+	  		<div class="services text-center">
+
+				<i class="fa fa-weixin" aria-hidden="true"></i>
+
+			  	<h2>on the line</h2>
+
+			  	<div class="hr-small"></div>
+
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. minima error. lorem</p>
+
+	  		</div>
+
+	  		
+	  	</div>
+
+	  	<div class="text-center" style="margin-top: 40px"><a href="#" class="btn action-button">Main Call to action</a></div>
+
+  </section>
+
+
+
+
+  <section data-anchor="news" id="news" class="section" style="background: url(<?php echo get_template_directory_uri(); ?>/images/background/photo4-min.jpg);">
+
+  	<h1 class="text-center">Latest News</h1>
+
+
+  	
+
+
+
+  		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+		    <div class="item active">
+		      <!-- <img src="http://landing_theme.app/wp-content/uploads/2017/04/pexels-photo-385997.jpeg" alt="..."> -->
+			
+			<div class="flex">
+
+				<div class="flex-box">
+					<img src="http://landing_theme.app/wp-content/uploads/2017/04/pexels-photo-385997.jpeg" alt="">
+				</div>
+
+				<div class="flex-box" style="display: flex; align-items: center; background: #ffffffe6;">
+
+					<div style="margin: auto; width: 70%;">
+
+						<h3>The title</h3>
+
+						<p><i class="fa fa-clock-o" aria-hidden="true"></i> Posted on October 10, 2017</p>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi omnis dolores sit assumenda accusamus, adipisci, consectetur maxime odit? Numquam officiis, quasi tenetur totam quo quisquam dignissimos similique nulla cum explicabo.</p>
+
+						<a href="#" class="btn btn-default">Read more</a>
+					</div>
+					
+				</div>
+
+			</div>
+
+
+
+		    </div>
+		    <div class="item">
+		      
+
+		      <div class="flex">
+
+				<div class="flex-box">
+					<img src="http://landing_theme.app/wp-content/uploads/2017/04/pexels-photo-384498.jpeg" alt="">
+				</div>
+
+				<div class="flex-box" style="display: flex; align-items: center; background: #ffffffe6;">
+
+					<div style="margin: auto; width: 70%;">
+
+						<h3>The title</h3>
+
+						<p><i class="fa fa-clock-o" aria-hidden="true"></i> Posted on October 10, 2017</p>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi omnis dolores sit assumenda accusamus, adipisci, consectetur maxime odit? Numquam officiis, quasi tenetur totam quo quisquam dignissimos similique nulla cum explicabo.</p>
+
+						<a href="#" class="btn btn-default">Read more</a>
+					</div>
+					
+				</div>
+
+			</div>
+
+		    </div>
+
+		  </div>
+
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+  		
+		
+
+
+
+  </section>
+
+
+
+
+  <section data-anchor="contact" id="map" class="section">
+  	
+
+  </section>
+
+
+</div>
+
+
+<?php get_footer( ) ?>
+
+
+
+
+
+
+<!-- <div class="flex-box">
+			<img src="http://landing_theme.app/wp-content/uploads/2017/04/pexels-photo-385997.jpeg" alt="">
+		</div>
+
+		<div class="flex-box" style="display: flex; align-items: center; background: #ffffffe6;">
+
+			<div style="margin: auto; width: 70%;">
+
+				<h3>The title</h3>
+
+				<p><i class="fa fa-clock-o" aria-hidden="true"></i> Posted on October 10, 2017</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi omnis dolores sit assumenda accusamus, adipisci, consectetur maxime odit? Numquam officiis, quasi tenetur totam quo quisquam dignissimos similique nulla cum explicabo.</p>
+
+				<a href="#" class="btn btn-default">Read more</a>
+			</div>
+			
+		</div> -->
