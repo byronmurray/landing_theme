@@ -20,9 +20,12 @@ url('https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229f8e968b
 
 
 
-  <section data-anchor="about" id="about" class="section" style="background: white;">
+  <section data-anchor="about" id="about" class="section" style="    background: rgb(238, 238, 238);">
+	
 
   	<h1 class="text-center">About us</h1>
+  	<h4>What we do and who we are</h4>
+  	<div class="hr-small hr-large"></div>
 
   	<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus beatae sequi perspiciatis est repellat molestiae nulla rerum voluptate nobis provident, eum veniam ipsa alias doloremque blanditiis. Eveniet id quas numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ex harum est facilis, quos, nisi quasi molestiae eum a atque exercitationem iusto? Natus architecto, amet, sapiente tenetur quia repudiandae inventore!</p>
 
@@ -30,40 +33,27 @@ url('https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229f8e968b
 
   		<div class="flex-box">
   			<img src="https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229f8e968bff576bc45f8_Testimonial-13.jpg" alt="">
-  			<div class="title">
-  				<header >Name</header>
-  				<span>Job span</span>
-  			</div>
+  			
 
   		</div>
 
   		<div class="flex-box">
   			<img src="https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229b7e968bff576bc45cc_Testimonial-16.jpg" alt="">
-  			<div class="title">
-  				<header >Name</header>
-  				<span>Jpb span</span>
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, a velit non! Sequi omnis aut a sint, voluptas fugiat provident pariatur quo velit molestiae vero voluptates atque nemo maxime nesciunt.</p>
-  			</div>
+  			
   			
   		</div>
 
   		<div class="flex-box">
 
   			<img src="https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c22a26bf6d3281049e05ed_Testimonial-17.jpg" alt="">
-  			<div class="title">
-  				<header>Name</header>
-  				<span>Jpb span</span>
-  			</div>
+  			
   			
   		</div>
 
   		<div class="flex-box">
 
   			<img src="https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229a0c00b1a86047694f3_Testimonial-5.jpg" alt="">
-  			<div class="title">
-  				<header>Name</header>
-  				<span>Jpb span</span>
-  			</div>
+  			
   			
   		</div>
 
@@ -77,8 +67,11 @@ url('https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229f8e968b
 
 
   <section data-anchor="service" id="service" class="section" style="background: url(<?php echo get_template_directory_uri(); ?>/images/background/photo3-min.jpg);">
-
+		
+		
   		<h1 class="text-center">Our Services</h1>
+  		<h4 style="margin-bottom: 30px;" class="h4-white">How we make your business Awesome!</h4>
+
 
 		<div class="flex">
 
@@ -194,8 +187,11 @@ url('https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229f8e968b
 
 
   <section data-anchor="news" id="news" class="section" style="background: url(<?php echo get_template_directory_uri(); ?>/images/background/photo4-min.jpg);">
+	
+	<h1 class="text-center">Latest News</h1>
+	<h4 style="margin-bottom: 30px;" class="h4-white">Fresh content updated daily!</h4>
+  	
 
-  	<h1 class="text-center">Latest News</h1>
 
 
   	
@@ -217,10 +213,10 @@ url('https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229f8e968b
 			<div class="flex">
 
 				<div class="flex-box">
-					<img src="http://landing_theme.app/wp-content/uploads/2017/04/pexels-photo-385997.jpeg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/slider/pexels-photo-385997.jpeg" alt="">
 				</div>
 
-				<div class="flex-box" style="display: flex; align-items: center; background: #ffffffe6;">
+				<div class="flex-box" style="display: flex; align-items: center; background: rgba(255, 255, 255, 0.81);">
 
 					<div style="margin: auto; width: 70%;">
 
@@ -246,10 +242,10 @@ url('https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229f8e968b
 		      <div class="flex">
 
 				<div class="flex-box">
-					<img src="http://landing_theme.app/wp-content/uploads/2017/04/pexels-photo-384498.jpeg" alt="">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/slider/pexels-photo-384498.jpeg" alt="">
 				</div>
 
-				<div class="flex-box" style="display: flex; align-items: center; background: #ffffffe6;">
+				<div class="flex-box" style="display: flex; align-items: center; background: rgba(255, 255, 255, 0.81);">
 
 					<div style="margin: auto; width: 70%;">
 
@@ -290,8 +286,39 @@ url('https://daks2k3a4ib2z.cloudfront.net/56295a7671e4da4b7d889209/56c229f8e968b
 
 
 
-  <section data-anchor="contact" id="map" class="section">
+<section data-anchor="contact" id="contact" class="section" style="background: url(<?php echo get_template_directory_uri(); ?>/images/background/pexels-photo.jpg);">
+	
+	<h4>Any questions?</h4>
+  	<h1 class="text-center">Contact us</h1>
+  	<div class="hr-small hr-large"></div>
+
+	<form>
+          <div class="form-group">
+            <label for="form_name">Name</label>
+            <input type="text" class="form-control" id="form_name" name="form_name" placeholder="Enter your full name">
+          </div>
+  
+          <div class="form-group">
+            <label for="form_email">Email address</label>
+            <input type="email" class="form-control" id="form_email" name="form_email" placeholder="Provide your email address">
+          </div>
+  
+          <div class="form-group">
+            <label for="form_phone">Phone</label>
+            <input type="text" class="form-control" id="form_phone" name="form_phone" placeholder="Enter a contact phone number">
+          </div>
+  
+          <div class="form-group form-message">
+            <label for="form_message">Message</label>
+            <textarea name="form_message" id="form_message" class="form-control" cols="30" rows="10" placeholder="What do you want?"></textarea>
+          </div>
+          
+          <button type="submit" class="btn action-button">Submit</button>
+        </form>
+
   	
+
+
 
   </section>
 

@@ -14,6 +14,12 @@
     margin: 0 60px;
 }
 
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: none;
+    background-color: #fff;
+    color: #333;
+}
+
 img {
 	max-width: 100%;
 }
@@ -37,6 +43,18 @@ h3 {
 	font-family: 'Impact';
 	letter-spacing: 1px;
 	margin-bottom: 5%;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 25px;
+    font-family: fantasy;
+}
+
+.h4-white {
+	color:white; 
+	text-shadow: 2px 2px 0px black;
 }
 
 .action-button {
@@ -75,8 +93,18 @@ h3 {
     background-color: rgba(0, 0, 0, .2);
 }
 
+.hr-large {
+	width: 20%;
+    margin: 15px auto;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.54);
+}
 
 
+
+form {
+	width: 600px;
+}
 
 
 
@@ -89,6 +117,12 @@ h3 {
 
 
 #about {
+	.pp-tableCell {
+		max-width: 1180px;
+	}
+	p {
+	    margin-bottom: 27px;
+	}
 	.flex {
 		justify-content: space-between;
 
@@ -98,58 +132,26 @@ h3 {
 		position: relative;
 		background: black; 
 		transition: opacity 1s ease;
-		.title{
-			bottom: 3px;
-			color: white;
-			font-size: 18px;
-			text-shadow: 1px 1px black;
-			left: 3px;
-			position: absolute;
-			p{
-				opacity: 0;
-				font-size: 0;
-				padding:0;
-				margin: 0;
-				transition: opacity 1s ease;
-				transition: font-size 1s ease;
-			}
-		}
-		&:hover{
-			opacity: .8; 
-		}
-		&:hover p{
-			opacity: 1 !important;
-			font-size: 14px !important;
-		}
 	}
 }
 
 
 #service {
 	h2{
-		opacity: 0;
-		font-size: 0;
-		padding: 0;
-		margin: 0;
-		transition: opacity 1s ease;
-		transition: font-size .8s ease;
-
+		display: none;
 	}
 	.fa {
 		font-size: 50px;
 		transition: font-size 1s ease;
 	}
 	.services {
-		background: #fffc;
+		background: rgba(255, 255, 255, 0.81);
 		flex-basis: 20%;
 		padding: 20px;
 		margin: 1px 1px;
 		transition: background 1s ease;
 		&:hover {
 			background: #fff;
-		}
-		&:hover  #service h2{
-			opacity: 1;
 		}
 
 
@@ -161,11 +163,4 @@ h3 {
 
 }
 
-.services:hover  h2 {
-	opacity: 1 !important;
-	font-size: 26px !important;
-}
 
-.services:hover  .fa {
-	font-size: 10px !important;
-}

@@ -8,6 +8,9 @@ jQuery.noConflict();
 
 		$('#pagepiling').pagepiling({
 			menu: null,
+			direction: 'horizontal',
+			loopBottom: true,
+        	loopTop: true,
 		});
 			
 		});
